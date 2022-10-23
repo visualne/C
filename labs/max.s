@@ -1,6 +1,9 @@
 .section .text
 .global _start
 
+/*Notes*/
+/*The push, add and sub instructions in the begining of each of the below functions are what setup the stack frames.*/
+
 _start:
     push {r11, lr}    /* Start of the prologue. Saving Frame Pointer and LR onto the stack */
     add r11, sp, #0   /* Setting up the bottom of the stack frame */
